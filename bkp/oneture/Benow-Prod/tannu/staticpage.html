@@ -1,0 +1,2427 @@
+<html>
+
+<head>
+    <style>
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+        }
+
+        @font-face {
+            font-family: 'Fjalla One';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Fjalla One'), local('FjallaOne-Regular'), url(https://fonts.gstatic.com/s/fjallaone/v5/rxxXUYj4oZ6Q5oDJFtEd6r3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+        }
+
+        .loader {
+            border: 5px solid #e53935;
+            border-radius: 50%;
+            border-top: 5px solid white;
+            width: 20px;
+            height: 20px;
+            -webkit-animation: spin 100s linear infinite;
+            /* Safari */
+            animation: spin .2s linear infinite;
+        }
+
+        .colorBNt {
+            font-size: 12pt;
+            color: red!important;
+        }
+
+        /* Safari */
+
+        .alignMidBN {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .imgwidthBNM {
+            width: 68%;
+            float: right;
+        }
+
+        .imgwidthBN {
+            max-width: 100%;
+        }
+
+        .imgwidthBNR {
+            max-width: 110%;
+            padding: 10px;
+        }
+
+        .loginTextBN {
+            color: #3D3D3D!important;
+            font-weight: 600;
+            font-size: 10pt;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .hgtBNM {
+            height: 10%;
+        }
+
+        .hghtBNM {
+            min-height: 469px;
+        }
+
+        .otpBNM {
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 20px;
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .hgtBN1 {
+            width: 100%;
+            height: 81%;
+            clear: both;
+        }
+
+        .hgt1BNM {
+            width: 45%;
+            float: left;
+        }
+
+        .hgt11BN {
+            width: 100%;
+            float: right;
+            margin-top: 3%;
+            vertical-align: middle;
+            margin-top: 11%;
+            margin-bottom: 7%;
+        }
+
+        .hgt111BN {
+            max-width: 44%;
+            padding-left: 10%;
+        }
+
+        .hgt121BN {
+            max-width: 50%;
+            padding-left: 2%;
+        }
+
+        .lgnBN1 {
+            height: 10%;
+            width: 9%;
+            float: left;
+        }
+
+        .mbrw3 {
+            padding-top: 30px;
+        }
+
+        .lgnBN2 {
+            height: auto;
+            width: 78%;
+            float: left;
+            padding-left: 10%;
+        }
+
+        .lgnBN11 {
+            height: auto;
+            width: 10%;
+            float: right;
+        }
+
+        .loadBN {
+            padding-top: 10px;
+        }
+
+        .lgnBN2R {
+            height: auto;
+            width: 84%;
+            float: left;
+        }
+
+        .lgnBN3 {
+            height: 10%;
+            width: 10%;
+            float: left;
+        }
+
+        .nxtBN1M {
+            padding-top: 8%;
+            font-size: 52pt;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .card-panelBNM {
+            transition: box-shadow .25s;
+            padding: 15px;
+            margin: 0.5rem 0 1rem 0;
+            border-radius: 2px;
+            background-color: #fff;
+        }
+
+        .whiteBN {
+            background-color: white!important;
+        }
+
+        .hghtBN {
+            background-image: url('./images/Banner_Img.png');
+            min-height: 689px;
+            width: 100%;
+        }
+
+        .profilBN {
+            background-image: url(./images/Banner_Img.png);
+            min-height: 633px;
+            width: 100%;
+        }
+
+        .hgtBN {
+            width: 42%;
+            float: left;
+            padding: 0px 0 0 78px;
+        }
+
+        .hgtBNR {
+            width: 50%;
+            float: left;
+        }
+
+        .hgt1BN {
+            height: auto;
+            width: 41%;
+            float: left;
+            padding: 28px 0 0px 78px;
+        }
+
+        .thirdhgt1BN {
+            height: auto;
+            width: 41%;
+            float: left;
+            padding: 0px 0 0px 78px!important;
+        }
+
+        .hgtBN11 {
+            width: 100%;
+            height: auto;
+            clear: both;
+        }
+
+        .lgnBN {
+            height: auto;
+            width: 75%;
+            float: left;
+        }
+
+        .card-panelBN {
+            transition: box-shadow .25s;
+            padding: 20px;
+            margin: 0.5rem 0 1rem 0;
+            border-radius: 2px;
+            background-color: #fff;
+        }
+
+        .widgetBN {
+            border-radius: 3px;
+        }
+
+        .z-depth-2BN {
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+        }
+
+        .signBN {
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .signBNM {
+            width: 100%;
+            height: auto;
+            margin-bottom: 40px;
+        }
+
+        .signBNR {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            padding-left: 14px;
+        }
+
+        .sign1BN {
+            max-width: 50%;
+            height: auto;
+            float: left;
+        }
+
+        .prof1BNM {
+            width: 35%;
+            height: auto;
+            float: left;
+        }
+
+        .sign2BN {
+            width: 100%;
+            height: auto;
+            float: right;
+            padding-left: 4%;
+        }
+
+        .prof2BNM {
+            width: 45%;
+            height: auto;
+            float: left;
+        }
+
+        .profmob2BNM {
+            width: 46%;
+            height: auto;
+            float: left;
+        }
+
+        .proffrmobBNM {
+            width: 85%;
+            height: auto;
+            float: left;
+        }
+
+        .signfontBN {
+            font-size: 18pt;
+        }
+
+        .paddBN {}
+
+        .regHdrS2BNM {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 14pt;
+            color: white;
+        }
+
+        .CntrBN {
+            padding: 17pt;
+            text-align: center;
+        }
+
+        .regBN {
+            font-size: 30pt!important;
+            font-family: 'Open Sans', sans-serif!important;
+        }
+
+        .regNrmS2BN {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 14pt;
+            color: #3D3D3D;
+        }
+
+        .regNrmS2BNM1 {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 12pt;
+            height: 40px!important;
+            color: #3D3D3D;
+        }
+
+        .invNrmS2BN {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 14pt;
+            color: #FFFFFF;
+        }
+
+        .signBNM1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 26px;
+        }
+
+        .regNrmS4BNM {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 10pt!important;
+            color: #3D3D3D;
+        }
+
+        .regNrmS4BNMR {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 8pt!important;
+            color: #3D3D3D;
+        }
+
+        .regNrmS4BN {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 12pt;
+            color: #3D3D3D;
+        }
+
+        .regNrmS5BN {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 10pt;
+            color: #3D3D3D;
+        }
+
+        .regHdrS2BN {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 14pt;
+            color: #3D3D3D;
+        }
+
+        .regHdrS2BNR {
+            font-family: 'Fjalla One', sans-serif;
+            font-size: 12pt;
+            color: #3D3D3D;
+        }
+
+        .inputBN {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid #e7e7e799!important;
+            border-radius: 0;
+            outline: none;
+            width: 92%!important;
+            max-width: 292px;
+            margin: 7px 0 10px 0;
+            padding: 0px 21px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 27pt;
+            background-color: #f9f9f9 !important;
+            border-radius: 5px;
+        }
+
+        .inputtBN {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid #f9f9f9!important;
+            border-radius: 0;
+            outline: none;
+            width: 22%!important;
+            max-width: 292px;
+            margin: 0 0 10px 0;
+            padding: 0px 21px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 34px!important;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+        }
+
+        .invalidinputtBN {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid red!important;
+            border-radius: 0;
+            outline: none;
+            width: 44%!important;
+            margin-bottom: 0px!important;
+            max-width: 292px;
+            margin: 0 0 10px 0;
+            padding: 0px 5px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 34px!important;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+            text-align: center!important;
+        }
+
+        .validinputtBN {
+            background-color: transparent;
+            border: .5px solid green!important;
+            border-radius: 0;
+            outline: none;
+            width: 44%!important;
+            text-align: center!important;
+            max-width: 292px;
+            margin: 0 0 10px 0;
+            margin-bottom: 0px!important;
+            padding: 0px 5px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 34px!important;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+        }
+
+        .validinputtBNM {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid green!important;
+            border-radius: 0;
+            outline: none;
+            width: 33%!important;
+            max-width: 292px;
+            margin: 0 0 10px 0;
+            margin-bottom: 0px!important;
+            padding: 0px 21px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 37px!important;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+            padding-bottom: 0rem;
+            min-height: 100%
+        }
+
+        html {
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .footer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 1rem;
+            background-color: #E53935;
+            text-align: center;
+            color: white;
+            font-size: 12pt;
+            font-weight: 550;
+        }
+
+        .ptBN {
+            margin-left: 6%;
+        }
+
+        .fnnBN {
+            font-weight: 500;
+        }
+
+        .centerBN {
+            text-align: center;
+        }
+
+        .paddingdeskBN {
+            margin-top: 48px;
+        }
+
+        .tcBNM {
+            font-size: 11pt;
+            color: #E53935;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .tcBN {
+            color: #e33b35!important;
+            font-weight: 600;
+            font-size: 9pt;
+            font-family: 'Open Sans', sans-serif;
+            text-decoration: none;
+        }
+
+        .rowBN {
+            width: 100%;
+            margin-left: auto;
+            left: auto;
+            right: auto;
+        }
+
+        .nxtpic1BNM {
+            text-align: center;
+            padding: 34pt;
+        }
+
+        .higBNM {
+            border-top: 4px solid rgba(255, 235, 59, 0.64);
+            height: auto;
+        }
+
+        .nxtBN1 {
+            padding: 11px 0 0 0;
+            font-size: 25pt;
+            color: #3D3D3D;
+            font-family: 'Open Sans', sans-serif!important;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .nxtpicBN {
+            padding: 5% 0px 0px 5%;
+        }
+
+        .nxtpicBNM {
+            height: 10%!important;
+        }
+
+        .lower {
+            text-transform: lowercase;
+        }
+
+        .nxtpic1BN {
+            width: 33%;
+            float: left;
+        }
+
+        .nxtpic11BNM {
+            width: 91%;
+            float: left;
+            padding: 15px 10px 6px 15px;
+        }
+
+        .nxtpic2BN {
+            width: 32%;
+            float: left;
+            padding: 1%;
+        }
+
+        .nxtpic3BN {
+            width: 29%;
+            float: right;
+            padding: 1%;
+        }
+
+        .imghBn {
+            height: 107px;
+            width: 127px;
+        }
+
+        .coollBN {
+            background-color: rgb(255, 252, 230);
+            background-position: center center;
+            background-repeat: no-repeat;
+            padding-top: 0px;
+            padding-bottom: 20px;
+        }
+
+        .imgpaddBN {
+            width: 27%;
+        }
+
+        .rwBN {
+            font-size: 12pt;
+            font-family: 'Fjalla One', sans-serif;
+            padding: 21pt;
+            border-radius: 6pt;
+        }
+
+        .fntBN1 {
+            font-size: 42pt;
+            font-weight: 600;
+        }
+
+        .nxtBN {
+            padding-top: 2pt;
+        }
+
+        .fonnntBN {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 13pt;
+            text-align: center;
+        }
+
+        .higBN {
+            border-top: 4px solid rgba(255, 235, 59, 0.64);
+        }
+
+        .brdrBN {
+            border-top: 1px solid #e7e7e7d6;
+        }
+
+        .divider {
+            border-width: 29px 29px 0 29px;
+            transform: rotate(-45deg);
+            z-index: 100;
+            position: absolute;
+            left: 50%;
+            margin-left: -20px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .ghBN {
+            background-color: #E53935!important;
+            height: 8%;
+            text-align: center;
+        }
+
+        .selectBNM {
+            width: 280px;
+            height: 39px;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding-left: 3%;
+            background-color: #f9f9f9 !important;
+        }
+
+        .selectBN {
+            width: 336px;
+            height: 39px;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding-left: 3%;
+            background-color: #f9f9f9 !important;
+        }
+
+        .linkButtonBN {
+            cursor: pointer;
+        }
+
+        .clrBN {
+            margin-bottom: 0px;
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .buildBN {
+            font-size: 16pt;
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif!important;
+        }
+
+        .mnBnxtpicghBN {
+            width: 95%;
+            height: 24%;
+            padding: 1% 0px 0px 5%;
+        }
+
+        .valign-wrapperBN {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .checkbox {
+            position: relative;
+            display: block;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            opacity: 0.00000001;
+            position: absolute;
+            left: 0;
+            margin-left: -20px;
+        }
+
+        .cbBN {
+            width: 80%!important;
+            font-size: 12pt;
+            margin: 0 0 20px 0;
+            padding: 0 10%
+        }
+
+        .cbBNR {
+            width: 75%!important;
+            max-width: 250px;
+            padding: 0;
+            margin-left: -31px;
+        }
+
+        .cbBNM {
+            width: 100%!important;
+            padding: 0;
+            font-size: 13pt;
+        }
+
+        .helper {
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            cursor: pointer;
+            display: block;
+            font-size: 16px;
+            user-select: none;
+            color: #e7e7e7;
+        }
+
+        .helper:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 4px;
+            width: 22px;
+            height: 22px;
+            transition: transform 0.28s ease;
+            border-radius: 3px;
+            border: 2px solid #e33b35;
+        }
+
+        .helper:after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 5px;
+            border-bottom: 2px solid #e33b35;
+            border-left: 2px solid #e33b35;
+            -webkit-transform: rotate(-45deg) scale(0);
+            -moz-transform: rotate(-45deg) scale(0);
+            -ms-transform: rotate(-45deg) scale(0);
+            transform: rotate(-45deg) scale(0);
+            position: absolute;
+            top: 12px;
+            left: 10px;
+        }
+
+        input[type="checkbox"]:checked~.helper::before {
+            color: #e33b35;
+        }
+
+        input[type="checkbox"]:checked~.helper::after {
+            -webkit-transform: rotate(-45deg) scale(1);
+            -moz-transform: rotate(-45deg) scale(1);
+            -ms-transform: rotate(-45deg) scale(1);
+            transform: rotate(-45deg) scale(1);
+        }
+
+        .checkbox label {
+            min-height: 24px;
+            padding-left: 40px;
+            font-weight: 600;
+            font-size: 9pt;
+            line-height: 20pt;
+            font-family: 'Open Sans', sans-serif!important;
+            cursor: pointer;
+            vertical-align: sub;
+            color: #3D3D3D;
+        }
+
+        input[type="checkbox"]:focus+label::before {
+            outline: rgb(59, 153, 252) auto 5px;
+        }
+
+        .colrBN {
+            color: #e33b35!important;
+        }
+
+        .pdBN {
+            padding: 12px
+        }
+
+        .fntsBN {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 30pt
+        }
+
+        .noUnderlineBN {
+            text-decoration: none!important;
+        }
+
+        .invNrmS2BNM {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 29pt;
+            color: #FFFFFF;
+        }
+
+        .regNrmS2BNM {
+            font-family: 'Open Sans', sans-serif!important;
+            font-size: 29pt!important;
+            color: #3D3D3D;
+        }
+
+        .mobbuttonBN {
+            text-transform: none;
+            color: white!important;
+            line-height: 50px;
+            height: 55px;
+            background-color: #e33b35;
+            text-align: center!important;
+            letter-spacing: .5px!important;
+            width: 100%!important;
+        }
+
+        .buttonBN {
+            text-transform: none;
+            color: white!important;
+            line-height: 50px;
+            height: 55px;
+            background-color: #e33b35;
+            text-align: center!important;
+            letter-spacing: .5px!important;
+            width: 70%!important;
+        }
+
+        .disablebuttonBN {
+            text-transform: none;
+            color: white!important;
+            line-height: 50px;
+            height: 55px;
+            background-color: grey!important;
+            text-align: center!important;
+            letter-spacing: .5px!important;
+            width: 70%!important;
+        }
+
+        .validInputBN {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid green!important;
+            border-radius: 0;
+            outline: none;
+            width: 92%!important;
+            max-width: 292px;
+            margin: 7px 0 10px 0;
+            padding: 0px 21px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 27pt;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+        }
+
+        .invalidInputBN {
+            background-color: transparent;
+            /* border: none!important; */
+            border: .5px solid #e33b35!important;
+            border-radius: 0;
+            outline: none;
+            width: 92%!important;
+            max-width: 292px;
+            margin: 7px 0 10px 0;
+            padding: 0px 21px;
+            box-shadow: none;
+            box-sizing: content-box;
+            height: 27pt;
+            background-color: rgb(244, 244, 249);
+            border-radius: 5px;
+        }
+
+        .btnBN {
+            text-decoration: none;
+            color: #ffffff!important;
+            text-align: center;
+            letter-spacing: .5px;
+            transition: .2s ease-out!important;
+            cursor: pointer!important;
+            outline: 0;
+            border: none;
+            border-radius: 2px!important;
+            display: inline-block;
+            height: 43px;
+            line-height: 36px;
+            padding: 0 2rem;
+            vertical-align: middle!important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .imgBNR {
+            width: 52px;
+            padding: 0px!important;
+        }
+
+        .coloBN {
+            font-size: 26pt;
+            color: white;
+            font-family: "Barlow"!important;
+        }
+
+        .whitecolBN {
+            font-size: 17pt;
+            font-weight: 400;
+            line-height: 40pt;
+            color: white;
+        }
+
+        .blkcolBN {
+            font-size: 12pt;
+            font-weight: 400;
+            line-height: 20pt;
+            color: grey;
+        }
+
+        .mobBN {
+            font-size: 16pt;
+            padding-left: 37px;
+        }
+
+        .mobileBN {
+            font-size: 14pt;
+        }
+
+        .footerBN {
+            padding: 13px 0px 0px 9%;
+            color: grey;
+            font-size: 13pt;
+        }
+
+        .mobfooterBN {
+            padding: 10px 3px 0px 25px;
+            color: grey;
+            font-size: 13pt;
+            background-color: #aad6cf21;
+            padding-bottom: 20pt;
+        }
+
+        .mobfootBN {
+            width: 90%;
+            padding-left: 4%;
+        }
+
+        .lnBN {
+            font-size: 18pt;
+            width: 90%;
+            padding: 5% 0px 3% 12%;
+        }
+
+        .lnBN1 {
+            font-size: 18pt;
+            width: 100%;
+            padding: 29% 6px 9% 0%;
+        }
+
+        .headmobBN {
+            width: 100%;
+            height: 7%;
+        }
+
+        .headleft {
+            float: left;
+            width: 50%;
+        }
+
+        .headright {
+            float: right;
+            width: 50%;
+        }
+
+        .lonBN {
+            width: 43px;
+            float: right;
+            border: 1px solid #e53935;
+            padding: 10px;
+            margin-right: 20pt;
+            border-radius: 2px;
+        }
+
+        .colleft {
+            float: left;
+            width: 25%
+        }
+
+        .colleftBNM {
+            float: left;
+            width: 100%;
+        }
+
+        .colright {
+            float: right;
+            width: 74%
+        }
+
+        .colpay {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+            padding-bottom: 15px;
+            clear: both;
+            padding-top: 10px
+        }
+
+        .colpayBN {
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+            clear: both;
+        }
+
+        .hgtbottBN {
+            width: 100%;
+            float: right;
+            margin-top: 3%;
+            vertical-align: middle;
+            margin-top: 11%;
+            margin-bottom: 10%;
+        }
+
+        .fontleftBN {
+            padding-left: 20pt;
+        }
+
+        .foBN {
+            font-size: 17px;
+            font-weight: bold;
+            font-family: "Barlow"!important;
+        }
+
+        .fontpBN {
+            font-size: 17px;
+            font-family: "Barlow"!important;
+        }
+
+        .fontp1BN {
+            font-size: 13pt;
+            font-family: "Barlow"!important;
+            font-weight: 600;
+        }
+
+        .fooBN {
+            font-family: "Barlow"!important;
+            font-size: 12pt;
+            padding-left: 10%;
+        }
+
+        .foooBN {
+            font-family: "Barlow"!important;
+            font-size: 12pt;
+            color: grey;
+        }
+
+        .availableBN {
+            padding-left: 12%;
+            color: green;
+        }
+
+        .av {
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .av1 {
+            width: 68%;
+            float: left;
+        }
+
+        .avm1 {
+            width: 81%;
+            float: left;
+        }
+
+        .avmm1 {
+            width: 73%;
+            float: left;
+        }
+
+        .av2 {
+            width: 30%;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .avmm2 {
+            width: 27%;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .avm2 {
+            width: 18%;
+            float: left;
+            margin-top: 6px;
+        }
+
+        .mrbottomBN {
+            margin-bottom: 0px!important;
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:title" content="Merchant Sign Up" />
+    <meta property="og:description" content="Don’t have an account yet? Sign Up for Free." />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title>Merchant Sign Up</title>
+</head>
+
+<body>
+    <div id="hghtDiv" class="hghtBN">
+        <div id="hgtDiv" class="hgtBN">
+            <div id="hgt1Div">
+                <br>
+                <img src="./images/benow_logo.png">
+                <br>
+                <br>
+                <br>
+                <div>
+                    <span class="coloBN">Trusted by 1,00,000+
+                        <br> Businesses to collect 
+                        <br>payments online & create a digital store</span>
+                    <br>
+                    <br>
+                    <ul style="list-style:none;">
+                        <li class="whitecolBN">
+                            <img src="./images/Right Tick.png">&nbsp; &nbsp;Easily create Online Store and Payment Links </li>
+                        <li class="whitecolBN">
+                            <img src="./images/Right Tick.png">&nbsp; &nbsp;Bank Grade Security</li>
+                        <li class="whitecolBN">
+                            <img src="./images/Right Tick.png">&nbsp; &nbsp;No need to invest in expensive e-commerce website</li>
+                        <li class="whitecolBN">
+                            <img src="./images/Right Tick.png">&nbsp; &nbsp;No technical skills required</li>
+                        <li class="whitecolBN">
+                                <img src="./images/Right Tick.png">&nbsp; &nbsp;Best in the industry - Lowest Transaction Fees*</li>
+                        
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div id="hgt1BNDiv" class="hgt1BN">
+            <div id="cardPanelDiv" class="z-depth-2BN whiteBN widgetBN card-panelBN lgnBN">
+                <div id="oneFrm">
+                    <div id="mobOnlyDiv1BN" class="hgt11BN">
+
+                        <div class="headmobBN">
+                            <div class="headleft">
+                                <img id="firstimageBN" src="./images/bnow_logo1.png" class="hgt111BN">
+                            </div>
+                            <div class="headright linkButtonBN" onclick="login()">
+                                <span class="lonBN">Login</span>
+                            </div>
+                        </div>
+                        <div class="lnBN1">
+                            <span>Trusted by
+                                <b>1,00,000+</b>
+                                <br>
+                                <b>Businesses </b>to collect 
+                                <b>payments online &</b>
+                                <br>create a digital store</span>
+                        </div>
+                        <div class="brdrBN"></div>
+                    </div>
+                    <div id="deskOnlyDiv1BN" class="signBN valign-wrapperBN">
+                        <div class="brdrBN"></div>
+                        <div id="sign2BNR" class="sign2BN">
+                            <span id="headreg" class="signfontBN"> Sign Up to simplify
+                                <br> your business.</span>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                    <div class="brdrBN"></div>
+                    <br />
+                    <br />
+                    <span id="mobileBN" class="mobBN">Mobile Number</span>
+                    <br>
+                    <br>
+                    <div align="center">
+                        <input class="inputBN regNrmS4BN" placeholder="Enter Your Mobile Number*" onkeyup="validateMN()" id="numberIpt" required="required"
+                            type="tel" />
+                        <br />
+                        <br />
+
+                    </div>
+                    <div>
+                        <div class="cbBN" id="cbBNR">
+
+                            By signing up you agree to our
+                            <a id='anchor' href="http://www.benow.in/privacy-policy/" target="_blank" class="tcBN">privacy policy</a> and
+                            <a id='anchor1' class="tcBN" href="http://www.benow.in/terms-and-conditions/" target="_blank">terms of use</a>
+
+                        </div>
+                    </div>
+                    <br />
+                    <div class="tcBN" id="sendotperrLbl" style="display: none;">Something went wrong! Please try again.</div>
+                    <br />
+                    <div align="center">
+
+                        <button id="continueBtn" onclick="sendOTP()" type="button" class="btnBN regNrmS2BN buttonBN">
+                            Continue</button>
+                    </div>
+
+
+                    <br />
+                    <div class="loginTextBN" id="loginhere" align="center">Already a user?
+                        <a class="tcBN" href="https://merchant.benow.in/"> LogIn here</a>
+                    </div>
+                </div>
+                <div id="twoFrm" style="display: none;">
+
+                    <div id="otpdeskOnlyDiv1BN" class="hgt11BN">
+
+                        <div class="headmobBN">
+                            <div class="headleft">
+                                <img onclick="sendP()" src="./images/left-arrow (1).png" style="
+                                    width: 26px;
+                                ">
+                                <img src="./images/bnow_logo1.png" class="hgt111BN">
+                            </div>
+                            <div class="headright linkButtonBN" onclick="login()">
+                                <span class="lonBN">Login</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="signBN valign-wrapperBN" id="sign">
+                        <div class="prof1BNM">
+                            <img src="./images/OTP@2x.png" height="90" class="paddBN">
+                        </div>
+                        <div id='otpsign' class="prof2BNM">
+                            <span align="left" class="regHdrS2BN">OTP has been sent to
+                                <span id="phoneSpn"></span>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <span id="otpBN" class="fooBN">OTP*</span>
+                    <br>
+                    <div align="center">
+                        <input class="inputBN regNrmS4BN" onKeyDown="if(this.value.length==6 && event.keyCode>47 && event.keyCode < 158)return false;"
+                            placeholder="Enter OTP*" onkeyup="validateOTP()" id="otpIpt" required="required" type="number" />
+                    </div>
+                    <br />
+                    <div class="tcBN" align="center" id="verifyotperrLbl" style="display: none;">Wrong OTP. Please try again.</div>
+                    <br />
+                    <div align="center">
+                        <button id="continueOTPBtn" onclick="verifyOTP()" type="button" class="btnBN regNrmS2BN buttonBN">Continue</button>
+                    </div>
+                    <div align="center" style="padding-top: 10px; cursor:  pointer; ">
+                        <span class="tcBN" (click)="sendOTP()">Resend OTP?</span>
+                    </div>
+
+                </div>
+                <div id="threeFrm" style="display: none;">
+                    <div id="thirdmobOnlyDiv1BN" class="hgt11BN">
+                        <div class="headmobBN">
+                            <div class="headleft">
+                                <img onclick="sendPP()" src="./images/left-arrow (1).png" style="width: 26px; ">
+                                <img src="./images/bnow_logo1.png" class="hgt111BN">
+                            </div>
+                            <div class="headright linkButtonBN" onclick="login()">
+                                <span class="lonBN">Login</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="signBN valign-wrapperBN" id="thirdsign">
+                        <div class="prof1BNM">
+                            <img src="./images/OTP@2x.png" height="65" class="paddBN">
+                        </div>
+                        <div class="prof2BNM" id="proffrmobBNM">
+                            <span align="left" class="regHdrS2BN">Enter Your Profile Details</span>
+                        </div>
+                    </div>
+                    <div class="signBN valign-wrapperBN" id="thidsign">
+                        <div style="width:100%; text-align:center">
+                            <span class="regHdrS2BN">Enter Your Profile Details</span>
+                        </div>
+                    </div>
+                    <span id="nameBN" class="fooBN">Name* </span>
+                    <div align="center">
+
+                        <input class="inputBN regNrmS5BN" placeholder="Enter Your Full Name*" onkeyup="validate()" id="nameIpt" type="text" required="required">
+                    </div>
+
+                    <span id="emailBN" class="fooBN">Email-ID*</span>
+                    <div align="center">
+
+                        <input class="inputBN regNrmS5BN" placeholder="Enter You Email-ID*" onkeyup="validate()" id="emailIpt" type="email" required="required">
+                        <div id="emailerror" class="tcBN" style="display: none">please enter the correct email Id.</div>
+                    </div>
+
+                    <span id="displayBN" class="fooBN">Display Name (Shop Name)*</span>
+                    <div align="center">
+                        <input class="inputBN regNrmS5BN " placeholder="Enter Display Name (Shop Name)*" onkeyup="validate()" id="shopNameIpt" type="text"
+                            required="required">
+                        <div id="dsply" class="tcBN" style="display: none">special characters are not allowed.</div>
+                    </div>
+                    <span id="categoryBN" class="fooBN">Business Category* </span>
+                    <div align="center">
+                        <select id="foo" class="selectBN" onchange="validate()"></select>
+                    </div>
+
+                    <span id="othercateeBN" style="display: none" class="fooBN">Others Category*</span>
+                    <div align="center" style="display: none" id="othercat">
+                        <input class="inputBN regNrmS5BN " placeholder="Please enter the others category*" onkeyup="validate()" id="otherscategoryIpt"
+                            type="text" required="required">
+                    </div>
+
+                    <span id="revenueBN" class="fooBN">Estimated Monthly Revenue* </span>
+                    <div align="center">
+                        <select id="revenue" class="selectBN"></select>
+                    </div>
+
+                    <span class="fooBN" id="passwordIpt1">Password*</span>
+                    <div align="center">
+
+                        <input class="regNrmS4BN inputBN regNrmS5BN " title="Password contain atleast 8 digit." id="passwordIpt" onkeyup="validate()"
+                            required="required" type="password" placeholder="Enter Password*">
+                        <div id="passerror" class="tcBN" style="display: none">Password contain atleast 8 digit.</div>
+                    </div>
+
+                    <div class="tcBN" align="center" id="liveerrLbl" style="display: none;">Something went wrong! Please try again.</div>
+                    <br />
+                    <div align="center" id="continu">
+
+                        <button id="continue" onclick="thircontinue()" type="button" class="btnBN regNrmS2BN buttonBN">Continue</button>
+
+                    </div>
+                    <div align="center" id="continur" style="display:none;">
+
+                        <button id="continue" onclick="thirdcontinue()" type="button" class="btnBN regNrmS2BN buttonBN">Continue</button>
+
+                    </div>
+
+
+                    <input type="text" id="lead" name="id" style="display:none;">
+                </div>
+                <div id="fourthFrm" style="display: none;">
+                    <div id="fourthmobOnlyDiv1BN" class="hgt11BN">
+                        <div class="headmobBN">
+                            <div class="headleft">
+                                <img onclick="sendthirdP()" src="./images/left-arrow (1).png" style="width: 26px; ">
+                                <img src="./images/bnow_logo1.png" class="hgt111BN">
+                            </div>
+                            <div class="headright linkButtonBN" onclick="login()">
+                                <span class="lonBN">Login</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="signBN valign-wrapperBN" id="thirdsign">
+                        <div class="prof1BNM">
+                            <img src="./images/OTP@2x.png" height="65" class="paddBN">
+                        </div>
+                        <div class="" id="proffrmobBNM">
+                            <span align="left" class="regHdrS2BN">Create your Branded
+                                <br> Payment link & Online Store</span>
+                        </div>
+                    </div>
+                    <div class="colpay">
+                        <div class="colleft" id="leftBN">
+                            <span class="foBN">Payment Link:</span>
+                        </div>
+                        <div class="colright" id="rightBN">
+                            <div id="av1" class="av1 ">
+                                <input class="validinputtBN mrbottomBN regNrmS5BN lower" name="dsf" id="displayfour" type="text" onpaste="key()" onkeyup="key()"
+                                    required="required" pattern="/^[a-zA-Z_\- ]+$/">&nbsp;
+                                <span id="payB" class="">.benow.in/pay</span>
+                            </div>
+                            <div id="av2" class="av2">
+                                <span class="availableBN" id="avail" style="display:none;"></span>
+                                <div class="loader" id="loader" style="display:none;"></div>
+                                <span class="availableBN colorBNt" id="unavail"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="errorlink" class="colpayBN" style="display:none;">
+                        <span class="colorBNt">Special Character is not allowed!</span>
+                    </div>
+
+                    <div class="colpay foooBN">
+                        You can use your payment link to collect money from your customer via SMS, Email, Whatsapp & More.
+                    </div>
+                    <br />
+                    <div class="brdrBN"></div>
+                    <br>
+
+                    <div class="colpay">
+                        <div class="colleft" id="leftBN1">
+                            <span class="foBN">Online Store Link:</span>
+                        </div>
+                        <div class="colright" id="rightBN1">
+                            <div id="lfjhnBN" class="av1">
+                                <input class="validinputtBN mrbottomBN regNrmS5BN lower" name="dsf" id="displayfour1" type="text" onpaste="key()" onkeyup="key()"
+                                    required="required" pattern="/^[a-zA-Z_\- ]+$/">&nbsp;
+                                <span id="payB" class="">.benow.in/store</span>
+                            </div>
+                            <div id="lfjhnBN1" class="av2">
+                                <span class="availableBN" id="avail1" style="display:none;">Available</span>
+                                <div class="loader" id="loader" style="display:none;"></div>
+                                <span class="availableBN colorBNt" id="unavail1">Unavailable</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="foooBN  colpay">
+                        You can add products to your store and start selling it over Facebook & Whatsapp.
+                    </div>
+
+                    <div class="fontleftBN foooBN center">
+                        You can not change your URL once you claim it.
+                    </div>
+                    <br />
+
+                    <div class="tcBN" align="center" id="liveerrLbl" style="display: none;">Something went wrong! Please try again.</div>
+                    <br />
+
+                    <div align="center">
+                        <button id="goLiveBtn" onclick="goLive()" type="button" class="btnBN regNrmS2BN buttonBN">Finish</button>
+                        <button style="display: none;" id="goToLoginBtn" onclick="goToLogin()" type="button" class="btnBN regNrmS2BN buttonBN">Go To Login</button>
+                    </div>
+
+                    <div align="center" class="loadBN" id="loaderrLbl" style="display: none;">
+                        <div class="loader"></div> Please wait ....
+                    </div>
+
+                    <input type="text" id="lead" name="id" style="display:none;">
+                </div>
+                <br>
+                <br>
+            </div>
+            <div id="cardPanelDiv1" class="whiteBN lgnBN11">
+            </div>
+        </div>
+    </div>
+    <div class="whiteBN" id="mobrow1">
+        <div class="mobfootBN">
+            <ul>
+                <li class="blkcolBN">Easily create Branded Payment Links and Digital Store</li>
+               
+                <li class="blkcolBN">Bank Grade Security</li>
+                <li class="blkcolBN">No need to invest in expensive e-commerce website</li>
+                <li class="blkcolBN">No technical skills required</li>
+               
+                <li class="blkcolBN">Best in the industry - Lowest Transaction Fees*</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mobfooterBN" id="mobrow2">
+        <div style="text-align:center; font-size:11pt;line-height:15pt;">Having trouble ?</div>
+        <div style="font-size:10.5pt; line-height:15pt; text-align: center;">&nbsp;write to us:helpdesk@benow.in</div>
+        <div style="font-size:9pt; line-height:15pt;">Copyright © 2016 Cashless Technologies India &nbsp;| All Rights reserved </div>
+    </div>
+
+
+    <div class="whiteBN" id="mobrow">
+        <div class="footerBN">&nbsp; &nbsp;
+            <span style="float:left;width: 54%;"> Copyright © 2016 Cashless Technologies India &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+                &nbsp;&nbsp; All Rights reserved &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|</span>
+            <span style="float:left;width: 35%;"> having trouble ? &nbsp; &nbsp; &nbsp; &nbsp; write to us: &nbsp;helpdesk@benow.in
+            </span>
+        </div>
+    </div>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '196938424181574');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=196938424181574&ev=PageView
+        &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-109225206-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script>
+        function sendOTP() {
+            document.getElementById('continueBtn').disabled = true;
+            document.getElementById('continueBtn').className = "btnBN regNrmS2BN disablebuttonBN";
+            setTimeout(function () {
+                document.getElementById('continueBtn').disabled = false;
+                document.getElementById('continueBtn').className = "btnBN regNrmS2BN buttonBN";
+            }, 5000);
+            var errLbl = document.getElementById('sendotperrLbl');
+            errLbl.style.display = 'none';
+            var numInpt = document.getElementById('numberIpt');
+            var number = numInpt.value;
+            var businessLob = "HB";
+            if (number && number.trim() && number.trim().length >= 10) {
+                var http0 = new XMLHttpRequest();
+                var url0 = "https://merchant.benow.in/user/getLead";
+                var obj0 = { mobileNumber: number.trim() }
+                var params0 = JSON.stringify(obj0);
+                http0.open("POST", url0, true);
+                http0.setRequestHeader("Content-type", "application/json");
+                http0.onreadystatechange = function () {
+                    if (http0.readyState == 4 && http0.status == 200) {
+                        var resp0 = JSON.parse(http0.responseText);
+                        if (resp0 && resp0.id > 0) {
+                            document.getElementById('emailIpt').value = resp0.email;
+                            document.getElementById('nameIpt').value = resp0.name;
+                            document.getElementById('lead').value = resp0.id;
+                            var leadId = resp0.id;
+                            var http = new XMLHttpRequest();
+                            var url = "https://merchant.benow.in/user/signUp";
+                            var obj = { mobileNumber: number.trim(), businessLob: businessLob, leadId: leadId }
+                            var params = JSON.stringify(obj);
+                            http.open("POST", url, true);
+                            http.setRequestHeader("Content-type", "application/json");
+                            http.onreadystatechange = function () {
+                                if (http.readyState == 4 && http.status == 200) {
+                                    var resp = JSON.parse(http.responseText);
+                                    if (resp && resp.responseFromAPI == true) {
+                                        if (window.ga) {
+                                            window.ga('send', 'pageview');
+                                        }
+                                        document.getElementById('continueBtn').disabled = false;
+                                        document.getElementById('continueBtn').className = "btnBN regNrmS2BN buttonBN";
+                                        document.getElementById('oneFrm').style.display = 'none';
+                                        document.getElementById('twoFrm').style.display = '';
+                                        document.getElementById('threeFrm').style.display = 'none';
+                                        document.getElementById('fourthFrm').style.display = 'none';
+                                        document.getElementById('mobrow1').style.display = 'none';
+                                        document.getElementById('mobOnlyDiv1BN').className = 'hgtbottBN';
+                                        document.getElementById('phoneSpn').innerHTML = number;
+                                    }
+                                }
+                            }
+                            http.send(params)
+                        }
+                        else {
+                            var leadId = "";
+                            var http = new XMLHttpRequest();
+                            var url = "https://merchant.benow.in/user/signUp";
+                            var obj = { mobileNumber: number.trim(), businessLob: businessLob, leadId: leadId }
+                            var params = JSON.stringify(obj);
+                            http.open("POST", url, true);
+                            http.setRequestHeader("Content-type", "application/json");
+                            http.onreadystatechange = function () {
+                                if (http.readyState == 4 && http.status == 200) {
+                                    var resp = JSON.parse(http.responseText);
+                                    if (resp && resp.responseFromAPI == true) {
+                                        if (window.ga) {
+                                            window.ga('send', 'pageview');
+                                        }
+                                        document.getElementById('continueBtn').disabled = false;
+                                        document.getElementById('continueBtn').className = "btnBN regNrmS2BN buttonBN";
+                                        document.getElementById('oneFrm').style.display = 'none';
+                                        document.getElementById('twoFrm').style.display = '';
+                                        document.getElementById('threeFrm').style.display = 'none';
+                                        document.getElementById('fourthFrm').style.display = 'none';
+                                        document.getElementById('mobrow1').style.display = 'none';
+                                        document.getElementById('mobOnlyDiv1BN').className = 'hgtbottBN';
+                                        document.getElementById('phoneSpn').innerHTML = number;
+                                    }
+                                }
+                            }
+                            http.send(params)
+                        }
+                    }
+                }
+                http0.send(params0);
+            }
+        }
+        function verifyOTP() {
+            document.getElementById('continueOTPBtn').disabled = true;
+            document.getElementById('continueOTPBtn').className = "btnBN regNrmS2BN disablebuttonBN";
+            setTimeout(function () {
+                document.getElementById('continueOTPBtn').disabled = false;
+                document.getElementById('continueOTPBtn').className = "btnBN regNrmS2BN buttonBN";
+            }, 5000);
+            var errLbl = document.getElementById('verifyotperrLbl');
+            errLbl.style.display = 'none';
+            var otpInpt = document.getElementById('otpIpt');
+            var otp = otpInpt.value;
+            var phoneSpan = document.getElementById('phoneSpn');
+            var phone = phoneSpan.innerHTML;
+            var businessLob = "HB";
+            if (otp && otp.trim() && otp.trim().length >= 6 && phone && phone.trim() && phone.trim().length >= 10) {
+                var http = new XMLHttpRequest();
+                var businessLob = "HB";
+                var url = "https://merchant.benow.in/user/verifyOTP";
+                var obj = { mobileNumber: phone.trim(), otp: otp.trim(), businessLob: businessLob }
+                var params = JSON.stringify(obj);
+                http.open("POST", url, true);
+                http.setRequestHeader("Content-type", "application/json");
+                http.onreadystatechange = function () {
+                    if (http.readyState == 4 && http.status == 200) {
+                        category();
+                        getEstimatedRevenue();
+                        var resp = JSON.parse(http.responseText);
+                        if (resp && resp.responseFromAPI == true) {
+                            if (window.ga) {
+                                window.ga('send', 'pageview');
+                            }
+                            var http2 = new XMLHttpRequest();
+                            var url2 = "https://merchant.benow.in/user/check";
+                            var obj2 = { mobileNumber: phone.trim() }
+                            var params2 = JSON.stringify(obj2);
+                            http2.open("POST", url2, true);
+                            http2.setRequestHeader("Content-type", "application/json");
+                            http2.onreadystatechange = function () {
+                                if (http2.readyState == 4 && http2.status == 200) {
+                                    var resp2 = JSON.parse(http2.responseText);
+                                    if (resp2 && resp2.merchantUser && resp2.merchantUser.id) {
+                                        if (window.ga) {
+                                            window.ga('send', 'pageview');
+                                        }
+                                        category();
+                                        getEstimatedRevenue();
+                                        document.getElementById('continueOTPBtn').disabled = false;
+                                        document.getElementById('continueOTPBtn').className = "btnBN regNrmS2BN buttonBN";
+                                        document.getElementById('goLiveBtn').style.display = 'none';
+                                        document.getElementById('goToLoginBtn').style.display = '';
+                                        document.getElementById('goToLoginBtn').style.backgroundColor = '#E33B35';
+                                        document.getElementById('passwordIpt').style.display = 'none';
+                                        document.getElementById('passwordIpt1').style.display = 'none';
+                                        document.getElementById('passerror').style.display = 'none';
+                                        document.getElementById('shopNameIpt').value = resp2.merchantUser.displayName;
+                                        document.getElementById('shopNameIpt').disabled = true;
+                                        document.getElementById('emailIpt').value = resp2.merchantUser.userId;
+                                        document.getElementById('emailIpt').disabled = true;
+                                        document.getElementById('nameIpt').value = resp2.merchantUser.contactPerson;
+                                        document.getElementById('nameIpt').disabled = true;
+                                        document.getElementById('foo').value = resp2.merchantUser.contactPerson;
+                                        document.getElementById('foo').disabled = true;
+                                        document.getElementById('revenue').value = resp2.merchantUser.revenue;
+                                        document.getElementById('revenue').disabled = true;
+                                        document.getElementById('twoFrm').style.display = 'none';
+                                        document.getElementById('threeFrm').style.display = '';
+                                        document.getElementById('fourthFrm').style.display = 'none';
+                                        document.getElementById('continur').style.display = 'none';
+                                        document.getElementById('continu').style.display = '';
+                                        document.getElementById('displayfour').value = resp2.merchantUser.storeUrl;
+                                        document.getElementById('displayfour1').value = resp2.merchantUser.storeUrl;
+                                        var d1 = resp2.merchantUser.storeUrl;
+                                        // document.getElementById('paymentIdent').innerHTML = d1;
+                                        //document.getElementById('onstrelink').innerHTML = d1;
+                                        document.getElementById('displayfour').disabled = true;
+                                        document.getElementById('displayfour1').disabled = true;
+                                        document.getElementById('unavail').style.display = 'none';
+                                        document.getElementById('avail').style.display = '';
+                                        document.getElementById('avail').innerHTML = 'Available';
+                                        document.getElementById('unavail1').style.display = 'none';
+                                        document.getElementById('avail1').style.display = '';
+                                        document.getElementById('avail1').innerHTML = 'Available';
+                                        validate();
+                                    }
+                                    else {
+                                        var http0 = new XMLHttpRequest();
+                                        var url0 = "https://merchant.benow.in/user/getLead";
+                                        var obj0 = { mobileNumber: phone.trim() }
+                                        var params0 = JSON.stringify(obj0);
+                                        http0.open("POST", url0, true);
+                                        http0.setRequestHeader("Content-type", "application/json");
+                                        http0.onreadystatechange = function () {
+                                            if (http0.readyState == 4 && http0.status == 200) {
+                                                var resp0 = JSON.parse(http0.responseText);
+                                                if (resp0 && resp0.id > 0) {
+                                                    document.getElementById('lead').value = resp0.id;
+                                                    var leadId = resp0.id;
+                                                    document.getElementById('continueOTPBtn').disabled = false;
+                                                    document.getElementById('continueOTPBtn').className = "btnBN regNrmS2BN buttonBN";
+                                                    document.getElementById('twoFrm').style.display = 'none';
+                                                    document.getElementById('threeFrm').style.display = '';
+                                                    document.getElementById('fourthFrm').style.display = 'none';
+                                                    document.getElementById('continur').style.display = 'none';
+                                                    document.getElementById('continur').style.display = '';
+                                                    document.getElementById('continu').style.display = 'none';
+                                                    document.getElementById('passwordIpt').style.display = '';
+                                                    document.getElementById('passwordIpt1').style.display = '';
+                                                }
+                                            }
+                                        }
+                                        http0.send(params0);
+                                    }
+                                }
+                            }
+                            http2.send(params2);
+                        }
+                        else
+                            errLbl.style.display = '';
+                    }
+                }
+                http.send(params);
+            }
+        }
+        function validateOTP() {
+            var otpBtn = document.getElementById('continueOTPBtn');
+            var otpInpt = document.getElementById('otpIpt');
+            var otp = otpInpt.value;
+            otpInpt.setCustomValidity('');
+            otpInpt.className = 'validInputBN regNrmS4BN';
+            if (otp && otp.trim() && otp.trim().length >= 6)
+                otpBtn.style.backgroundColor = '#E33B35';
+            else {
+                otpBtn.style.backgroundColor = '#E33B35';
+                if (!otp || !otp.trim() || otp.trim().length <= 0) {
+                    otpInpt.className = 'invalidInputBN regNrmS4BN';
+                    otpInpt.setCustomValidity('OTP is mandatory');
+                }
+                else if (otp && otp.trim() && otp.trim().length < 6) {
+                    otpInpt.className = 'invalidInputBN regNrmS4BN';
+                    otpInpt.setCustomValidity('OTP is of 6 digits');
+                }
+            }
+        }
+        function validateMN() {
+            var btn = document.getElementById('continueBtn');
+            var numInpt = document.getElementById('numberIpt');
+            var number = numInpt.value;
+            numInpt.setCustomValidity('');
+            numInpt.className = 'validInputBN regNrmS4BN';
+            if (number && number.trim() && number.trim().length >= 10)
+                btn.style.backgroundColor = '#E33B35';
+            else {
+                btn.style.backgroundColor = '#E33B35';
+                if (!number || !number.trim() || number.trim().length <= 0) {
+                    numInpt.className = 'invalidInputBN regNrmS4BN';
+                    numInpt.setCustomValidity('Mobile Number is mandatory');
+                }
+                else if (number && number.trim() && number.trim().length < 10) {
+                    numInpt.className = 'invalidInputBN regNrmS4BN';
+                    numInpt.setCustomValidity('Please enter a valid Mobile Number');
+                }
+            }
+        }
+        function goToLogin() {
+            window.location.href = 'https://merchant.benow.in/';
+        }
+        function thircontinue() {
+            document.getElementById('oneFrm').style.display = 'none';
+            document.getElementById('twoFrm').style.display = 'none';
+            document.getElementById('threeFrm').style.display = 'none';
+            document.getElementById('fourthFrm').style.display = '';
+        }
+        function thirdcontinue() {
+            if (validate()) {
+                document.getElementById('continue').disabled = true;
+                document.getElementById('continue').className = "btnBN regNrmS2BN disablebuttonBN";
+                setTimeout(function () {
+                    document.getElementById('continue').disabled = false;
+                    document.getElementById('continue').className = "btnBN regNrmS2BN buttonBN";
+                }, 5000);
+                document.getElementById('oneFrm').style.display = 'none';
+                document.getElementById('twoFrm').style.display = 'none';
+                document.getElementById('threeFrm').style.display = 'none';
+                document.getElementById('fourthFrm').style.display = '';
+                var disp = document.getElementById('shopNameIpt');
+                var d1 = disp.value;
+                var d2 = d1.replace(/\s/g, '');
+                document.getElementById('displayfour').value = d2;
+                document.getElementById('displayfour1').value = d2;
+
+                display();
+            } else {
+                document.getElementById('oneFrm').style.display = 'none';
+                document.getElementById('twoFrm').style.display = 'none';
+                document.getElementById('threeFrm').style.display = '';
+                document.getElementById('fourthFrm').style.display = 'none';
+            }
+        }
+
+        function goLive() {
+            displaynamma();
+            setTimeout(function () {
+
+                if (document.getElementById('avail').innerHTML == 'Available') {
+
+                    document.getElementById('goLiveBtn').disabled = false;
+                    var errLbl = document.getElementById('liveerrLbl');
+                    var loaderr = document.getElementById('loaderrLbl');
+                    errLbl.style.display = 'none';
+                    loaderr.style.display = '';
+                    var emailInpt = document.getElementById('emailIpt');
+                    var shopNameInpt = document.getElementById('shopNameIpt');
+                    var passwordInpt = document.getElementById('passwordIpt');
+                    var nameInpt = document.getElementById('nameIpt');
+                    var otpInpt = document.getElementById('otpIpt');
+                    var numInpt = document.getElementById('numberIpt');
+                    var leadInpt = document.getElementById('lead');
+                    var fa = document.getElementById('foo');
+                    var faa = fa.value.trim();
+                    var categoryCom = document.getElementById('otherscategoryIpt');
+                    var categoryComment = categoryCom.value.trim();
+                    var revnue = document.getElementById('revenue');
+                    var faa1 = revnue.value.trim();
+                    var storeUrl = document.getElementById('displayfour');
+                    var sturl = storeUrl.value.trim();
+                    var sturl = sturl.replace(/\s/g, '');
+                    var email = emailInpt.value.trim();
+                    var mobileNumber = numInpt.value.trim();
+                    var password = passwordInpt.value;
+                    var displayName = shopNameInpt.value.trim();
+                    var fullName = nameInpt.value.trim();
+                    var leadV = leadInpt.value.trim();
+                    var otp = otpInpt.value.trim();
+                    var myURL = window.location.href;
+                    var channel = "";
+                    if (myURL) {
+                        if (myURL.lastIndexOf('/') == myURL.length - 1)
+                            myURL = myURL.substring(0, myURL.length - 1);
+                        var urlPrts = myURL.split('/');
+                        if (urlPrts && urlPrts.length > 0) {
+                            var source = urlPrts[urlPrts.length - 1];
+                            //console.log(source);
+                            if (source) {
+                                source = source.toString();
+                                if (source == 'register' || source == '1')
+                                    source = null;
+                            }
+                            if (source != null) {
+                                if (source != null && source.charAt(0) == 'g') {
+                                    channel = "Google";
+                                }
+                                if (source != null && source.charAt(0) == 'f') {
+                                    channel = "Facebook";
+                                }
+                            }
+                        }
+                    }
+                    if (source == null) {
+                        var channel = "DIRECT";
+                    }
+                    if (password)
+                        password = password.trim();
+                    var http = new XMLHttpRequest();
+                    var url = "https://merchant.benow.in/user/register";
+                    var obj = {
+                        emailId: email,
+                        mobileNumber: mobileNumber,
+                        password: password ? password : null,
+                        displayName: displayName,
+                        fullName: fullName,
+                        source: source,
+                        leadId: leadV,
+                        otp: otp,
+                        category: faa,
+                        storeUrl: sturl,
+                        channel: channel,
+                        revenue: faa1,
+                        categoryComment: categoryComment
+                    };
+                    var params = JSON.stringify(obj);
+                    http.open("POST", url, true);
+                    http.setRequestHeader("Content-type", "application/json");
+                    http.onreadystatechange = function () {
+                        loaderr.style.display = '';
+                        if (http.readyState == 4 && http.status == 200) {
+                            var resp = JSON.parse(http.responseText);
+                            if (resp && resp.merchantUser && resp.merchantUser.id > 0) {
+                                if (window.fbq) {
+                                    window.fbq('track', 'CompleteRegistration');
+                                }
+                                if (window.ga) {
+                                    window.ga('send', 'pageview');
+                                }
+                                if (window.gtag) {
+                                    window.gtag('event', 'conversion', { 'send_to': 'AW-822247326/7VsCCJWMt3sQnv-JiAM' });
+                                }
+                                window.location.href = 'https://merchant.benow.in/autologin/' + btoa(JSON.stringify({
+                                    "login": email,
+                                    "password": password
+                                }));
+                            }
+                            else
+                                errLbl.style.display = '';
+                        }
+                    }
+                    http.send(params);
+                }
+            }, 6000);
+        }
+        function category() {
+            var elm = document.getElementById('foo'), // get the select
+                df = document.createDocumentFragment();
+            var http4 = new XMLHttpRequest();
+            var url4 = "https://merchant.benow.in/user/getDashboardCategory";
+            var businessLob = "HB";
+            var obj4 = { businessLob: businessLob }
+            var params4 = JSON.stringify(obj4);
+            http4.open("POST", url4, true);
+            http4.setRequestHeader("Content-type", "application/json");
+            http4.onreadystatechange = function () {
+                if (http4.readyState == 4 && http4.status == 200) {
+                    var resp4 = JSON.parse(http4.responseText);
+                    var categry = resp4.data.categoryDetails;
+                    if (categry && categry.length > 0) {
+                        var c1 = new Array();
+                        for (var i = 0; i < categry.length; i++) {
+                            // c1.push(categry[i].categoryName);
+                            var option = document.createElement('option'); // create the option element
+                            option.value = categry[i].categoryName; // set the value property
+                            option.appendChild(document.createTextNode(categry[i].categoryName)); // set the textContent in a safe way.
+                            df.appendChild(option); // append the option to the document fragment
+                        }
+                        //return c1;
+                    }
+                    elm.appendChild(df);
+                    validate();
+                }
+            }
+            http4.send(params4);
+        }
+        function getEstimatedRevenue() {
+            var elm = document.getElementById('revenue'), // get the select
+                df = document.createDocumentFragment();
+            var http4 = new XMLHttpRequest();
+            var url4 = "https://merchant.benow.in/user/getEstimatedRevenue";
+            http4.open("GET", url4, true);
+            http4.setRequestHeader("Content-type", "application/json");
+            http4.onreadystatechange = function () {
+                if (http4.readyState == 4 && http4.status == 200) {
+                    var resp4 = JSON.parse(http4.responseText);
+                    var revenu = resp4.data;
+                    if (revenu && revenu.length > 0) {
+                        var c1 = new Array();
+                        for (var i = 0; i < revenu.length; i++) {
+                            var option = document.createElement('option'); // create the option element
+                            option.value = revenu[i].revenue; // set the value property
+                            option.appendChild(document.createTextNode(revenu[i].revenue)); // set the textContent in a safe way.
+                            df.appendChild(option); // append the option to the document fragment
+                        }
+                    }
+                    elm.appendChild(df);
+                    validate();
+                }
+            }
+            http4.send();
+        }
+        function validate() {
+            var btn = document.getElementById('goLiveBtn');
+            var passwordInpt = document.getElementById('passwordIpt');
+            var nameInpt = document.getElementById('nameIpt');
+            var emailInpt = document.getElementById('emailIpt');
+            var shopNameInpt = document.getElementById('shopNameIpt');
+            var password = passwordInpt.value;
+            var name = nameInpt.value;
+            var email = emailInpt.value;
+            var shopName = shopNameInpt.value;
+            var valid = false;
+            var v1 = false;
+            var v2 = false;
+            var v3 = false;
+            var v4 = false;
+            var v5 = false;
+            if (name && name.trim() && name.trim().length > 0) {
+                nameInpt.className = 'validInputBN regNrmS5BN';
+                nameInpt.setCustomValidity('');
+                valid = true;
+                v4 = true;
+            }
+            else {
+                nameInpt.className = 'invalidInputBN regNrmS5BN';
+                nameInpt.setCustomValidity('Name is mandatory');
+                v4 = false;
+            }
+            if (email && email.trim() && email.trim().length > 0) {
+                email = email.trim();
+                valid = false;
+                if (email.indexOf('@') < 1 || email.lastIndexOf('@') != email.indexOf('@') || email.indexOf('@') + 4 > email.length
+                    || email.indexOf('@') + 1 > email.lastIndexOf('.') || email.lastIndexOf('.') + 1 >= email.length
+                    || email.indexOf('.@') >= 0 || email.indexOf('@.') >= 0 || email.indexOf('..') >= 0) {
+                    document.getElementById('emailerror').style.display = '';
+                    emailInpt.className = 'invalidInputBN regNrmS5BN';
+                    emailInpt.setCustomValidity('Entered Email is not valid');
+                    valid = false;
+                    v1 = false;
+                }
+                else {
+                    document.getElementById('emailerror').style.display = 'none';
+                    emailInpt.className = 'validInputBN regNrmS5BN';
+                    emailInpt.setCustomValidity('');
+                    valid = true;
+                    v1 = true;
+                }
+            }
+            else {
+                emailInpt.className = 'invalidInputBN regNrmS5BN';
+                emailInpt.setCustomValidity('Email is mandatory');
+                valid = false;
+                v1 = false;
+            }
+            if (shopName && shopName.trim() && shopName.trim().length > 0) {
+                var pp = shopName.trim();
+                valid = false;
+                if (((/^[a-zA-Z0-9\-\s]+$/).test(pp)) && pp != 'benow' && pp != 'givnow' && pp != 'givnow' && pp != 'pay' && pp != 'merchant') {
+                    shopNameInpt.className = 'validInputBN regNrmS5BN';
+                    document.getElementById('dsply').style.display = 'none';
+                    shopNameInpt.setCustomValidity('');
+                    v2 = true;
+                    valid = true;
+                } else {
+                    shopNameInpt.className = 'invalidInputBN regNrmS5BN';
+                    document.getElementById('dsply').style.display = '';
+                    shopNameInpt.setCustomValidity('special characters are not allowed ');
+                    v2 = false;
+                    valid = false;
+                }
+            }
+            else {
+                shopNameInpt.className = 'invalidInputBN regNrmS5BN';
+                document.getElementById('dsply').style.display = 'none';
+                shopNameInpt.setCustomValidity('Display Name (Shop Name) is mandatory');
+                v2 = false;
+                valid = false;
+            }
+            if (passwordInpt.style.display && passwordInpt.style.display.trim().toLowerCase() == 'none') {
+                document.getElementById('passerror').style.display = 'none';
+                passwordInpt.className = 'invalidInputBN regNrmS5BN';
+                passwordInpt.setCustomValidity('Password is mandatory');
+                valid = false;
+                v3 = false;
+            }
+            else {
+                if ((password && password.trim()) && password.trim().length > 7) {
+                    document.getElementById('passerror').style.display = 'none';
+                    passwordInpt.className = 'validInputBN regNrmS5BN';
+                    passwordInpt.setCustomValidity('');
+                    valid = true;
+                    v3 = true;
+                }
+                else if (password.trim().length == 0) {
+                    document.getElementById('passerror').style.display = 'none';
+                    passwordInpt.className = 'invalidInputBN regNrmS5BN';
+                    valid = false;
+                    v3 = false;
+                } else {
+                    document.getElementById('passerror').style.display = '';
+                    passwordInpt.className = 'invalidInputBN regNrmS5BN';
+                    valid = false;
+                    v3 = false;
+                }
+            }
+            var fa = document.getElementById('foo');
+            var faa = fa.value.trim();
+            var other = document.getElementById('otherscategoryIpt');
+            var othercate = other.value.trim();
+
+            if (faa == "Others") {
+                document.getElementById('othercat').style.display = "";
+                document.getElementById('othercateeBN').style.display = "";
+
+                if (othercate.length == 0) {
+                    other.className = 'invalidInputBN regNrmS5BN';
+                    valid = false;
+                    v5 = false;
+                } else {
+                    other.className = 'validInputBN regNrmS5BN';
+                    valid = true;
+                    v5 = true;
+                }
+            }
+            else {
+                document.getElementById('othercat').style.display = "none";
+                document.getElementById('othercateeBN').style.display = "none";
+                valid = true;
+                v5 = true;
+            }
+
+            if (v1 && v2 && v3 && v4 && v5) {
+                return valid;
+            }
+
+        }
+    </script>
+    <script>
+        function mobileView() {
+
+            document.getElementById('mobrow').style.display = 'none';
+            document.getElementById('continueBtn').className = 'btnBN regNrmS2BN mobbuttonBN';
+            document.getElementById('hghtDiv').className = 'hghtBNM colorBN';
+            document.getElementById('hghtDiv').className = 'hghtBNM colorBN';
+            document.getElementById('foo').className = 'selectBNM';
+            document.getElementById('leftBN').className = 'colleftBNM';
+            document.getElementById('rightBN').className = 'colleftBNM';
+            document.getElementById('leftBN1').className = 'colleftBNM';
+            document.getElementById('rightBN1').className = 'colleftBNM';
+            document.getElementById('lfjhnBN').className = 'avmm1';
+            document.getElementById('lfjhnBN1').className = 'avmm2';
+
+            document.getElementById('hgt1Div').className = 'hgt1BNM';
+            document.getElementById('hgt1BNDiv').className = 'hgtBN11';
+            document.getElementById('cardPanelDiv').className = 'whiteBN lgnBN2';
+            document.getElementById('cardPanelDiv1').className = 'whiteBN lgnBN11';
+            document.getElementById('mobrow1').className = '';
+            document.getElementById('firstimageBN').className = 'hgt121BN';
+            document.getElementById('cbBNR').className = 'cbBNM';
+            document.getElementById('hgtDiv').style.display = 'none';
+            document.getElementById('hgtDiv').className = '';
+            document.getElementById('numberIpt').className = 'inputBN regNrmS4BNM';
+            document.getElementById('sign').className = 'signBNM valign-wrapperBN';
+            document.getElementById('thirdsign').className = 'signBNM1 valign-wrapperBN';
+            document.getElementById('thidsign').style.display = 'none';
+            document.getElementById('goLiveBtn').className = 'btnBN regNrmS2BNM1 mobbuttonBN';
+            document.getElementById('goToLoginBtn').className = 'btnBN regNrmS2BNM1 buttonBN';
+            document.getElementById('anchor').className = 'tcBNM';
+            document.getElementById('anchor1').className = 'tcBNM';
+            document.getElementById('loginhere').style.display = 'none';
+            document.getElementById('mobileBN').className = 'mobileBN';
+            document.getElementById('otpBN').className = 'mobileBN';
+            document.getElementById('nameBN').className = 'mobileBN';
+            document.getElementById('displayBN').className = 'mobileBN';
+            document.getElementById('emailBN').className = 'mobileBN';
+            document.getElementById('categoryBN').className = 'mobileBN';
+            document.getElementById('passwordIpt1').className = 'mobileBN';
+            document.getElementById('av1').className = 'avm1';
+            document.getElementById('av2').className = 'avm2';
+            // document.getElementById('va1').className = 'avm1';
+            // document.getElementById('va2').className = 'avm2';
+            // document.getElementById('payBN').className = 'foooBN';
+            document.getElementById('payB').className = 'foooBN';
+            // document.getElementById('vaa').className = 'foooBN';
+            document.getElementById('displayfour').className = "validinputtBNM regNrmS5BN lower";
+            document.getElementById('displayfour1').className = "validinputtBNM regNrmS5BN lower";
+            document.getElementById('proffrmobBNM').className = 'proffrmobBNM';
+            document.getElementById('mobOnlyDiv1BN').style.display = '';
+            document.getElementById('deskOnlyDiv1BN').style.display = 'none';
+            document.getElementById('sign2BNR').style.display = 'none';
+            document.getElementById('hghtDiv').className = 'otpBNM';
+            document.getElementById('otpsign').className = 'profmob2BNM';
+        }
+        function desktopView() {
+            document.getElementById('fourthmobOnlyDiv1BN').style.display = 'none';
+            document.getElementById('thirdmobOnlyDiv1BN').style.display = 'none';
+            document.getElementById('otpdeskOnlyDiv1BN').style.display = 'none';
+            document.getElementById('mobrow2').style.display = 'none';
+            document.getElementById('mobrow1').style.display = 'none';
+            document.getElementById('hghtDiv').className = 'hghtBN colorBN';
+            document.getElementById('hgtDiv').className = 'hgtBN';
+            document.getElementById('hgt1Div').className = '';
+            document.getElementById('hgt1BNDiv').className = 'hgt1BN';
+            document.getElementById('cardPanelDiv').className = 'z-depth-2BN whiteBN widgetBN card-panelBN lgnBN';
+            document.getElementById('mobOnlyDiv1BN').style.display = 'none';
+            document.getElementById('deskOnlyDiv1BN').style.display = '';
+            document.getElementById('mobOnlyDiv1BN').style.display = 'none';
+            document.getElementById('sign2BNR').style = '';
+            document.getElementById('thirdsign').style.display = 'none';
+        }
+        function mobrotation() {
+            document.getElementById('mobOnlyDiv1BN').style.display = 'none';
+            document.getElementById('mobOnlyDiv2BN').style.display = 'none';
+            document.getElementById('mobOnlyDiv3BN').style.display = 'none';
+            document.getElementById('posterImgMob').style.display = 'none';
+            document.getElementById('hgtDiv').className = 'hgtBNR';
+            document.getElementById('imgpad').className = 'imgBNR';
+            document.getElementById('sign2BNR').style = '';
+            document.getElementById('cardPanelDiv').className = 'z-depth-2BN whiteBN widgetBN card-panelBNM lgnBN2R';
+            document.getElementById('posterImg').className = 'imgwidthBNR';
+            document.getElementById('headreg').className = 'regHdrS2BNR';
+            document.getElementById('deskOnlyDiv1BN').className = 'signBNR valign-wrapperBN';
+            document.getElementById('numberIpt').className = 'inputBN regNrmS4BNMR';
+            document.getElementById('cbBNR').className = 'cbBNR';
+        }
+        function login() {
+            window.location.href = 'https://merchant.benow.in/login/1';
+        }
+        function sendP() {
+            document.getElementById('oneFrm').style.display = '';
+            document.getElementById('twoFrm').style.display = 'none';
+            document.getElementById('threeFrm').style.display = 'none';
+            document.getElementById('fourthFrm').style.display = 'none';
+        }
+        function sendPP() {
+            document.getElementById('oneFrm').style.display = 'none';
+            document.getElementById('twoFrm').style.display = '';
+            document.getElementById('threeFrm').style.display = 'none';
+            document.getElementById('fourthFrm').style.display = 'none';
+        }
+        function sendthirdP() {
+            document.getElementById('oneFrm').style.display = 'none';
+            document.getElementById('twoFrm').style.display = 'none';
+            document.getElementById('threeFrm').style.display = '';
+            document.getElementById('fourthFrm').style.display = 'none';
+        }
+        window.addEventListener("orientationchange", function () {
+            if (screen.width < 600) {
+                mobileView();
+            } else {
+                desktopView();
+            }
+        });
+        (function () {
+            if (screen.width < 600) {
+                mobileView();
+            } else {
+                desktopView();
+            }
+        })();
+        function display() {
+            document.getElementById('loader').style.display = "";
+            document.getElementById('avail').style.display = "none";
+            document.getElementById('unavail').style.display = "none";
+            document.getElementById('avail1').style.display = "none";
+            document.getElementById('unavail1').style.display = "none";
+            var shopNameInpt = document.getElementById('shopNameIpt');
+            var p1 = shopNameInpt.value;
+            // var pps = false;
+            var http5 = new XMLHttpRequest();
+            var url5 = "https://merchant.benow.in/user/displayupdate";
+            var obj5 = { storeUrl: p1 }
+            //console.log(obj5, 'heheheheheh');
+            var params5 = JSON.stringify(obj5);
+            http5.open("POST", url5, true); 1
+            http5.setRequestHeader("Content-type", "application/json");
+            http5.onreadystatechange = function () {
+                if (http5.readyState == 4 && http5.status == 200) {
+                    var resp5 = JSON.parse(http5.responseText);
+                    if (resp5.data.responseFromAPI == false) {
+                        document.getElementById('loader').style.display = "none";
+                       // console.log('dhgfj')
+                        document.getElementById('avail').style.display = "";
+                        document.getElementById('avail').innerHTML = "Available";
+                        document.getElementById('unavail').innerHTML = "";
+                        document.getElementById('avail1').innerHTML = "Available";
+                        document.getElementById('unavail1').innerHTML = "";
+                        document.getElementById('unavail').style.display = "none";
+                        document.getElementById('avail1').style.display = "";
+                        document.getElementById('unavail1').style.display = "none";
+                        //document.getElementById('goLiveBtn').disabled = false;
+                        document.getElementById('displayfour').className = "validinputtBN regNrmS5BN lower";
+                        document.getElementById('displayfour1').className = "validinputtBN regNrmS5BN lower";
+                    } else {
+                       // console.log('dhgfj1')
+                        document.getElementById('loader').style.display = "none";
+                        document.getElementById('avail').style.display = "none";
+                        document.getElementById('unavail').style.display = "";
+                        document.getElementById('unavail').innerHTML = "Unavailable";
+                        document.getElementById('avail').innerHTML = "";
+                        document.getElementById('unavail1').innerHTML = "Unavailable";
+                        document.getElementById('avail1').innerHTML = "";
+                        document.getElementById('avail1').style.display = "none";
+                        document.getElementById('unavail1').style.display = "";
+                        document.getElementById('displayfour').className = "validinputtBN regNrmS5BN lower";
+                        document.getElementById('displayfour1').className = "validinputtBN regNrmS5BN lower";
+                        //  document.getElementById('goLiveBtn').disabled = true;
+                        // console.log('true','display');
+                    }
+                }
+            }
+            http5.send(params5);
+        }
+
+        function key() {
+            var d2 = document.getElementById('displayfour');
+            d2 = d2.value.toLowerCase();
+            d2 = d2.trim();
+            d2 = d2.replace(/\s/g, '');
+            document.getElementById('displayfour').value = d2;
+            var valid = false;
+            if (d2 && d2.trim() != '' && ((/^[a-zA-Z0-9\-_]{0,40}$/).test(d2)) && d2 != 'benow' && d2 != 'givnow'
+                && d2 != 'givnow' && d2 != 'pay' && d2 != 'merchant') {
+                document.getElementById('displayfour1').value = d2;
+                document.getElementById('errorlink').style.display = "none";
+                document.getElementById('goLiveBtn').disabled = false;
+
+                document.getElementById('avail').style.display = "none";
+                document.getElementById('unavail').style.display = "none";
+                document.getElementById('avail1').style.display = "none";
+                document.getElementById('unavail1').style.display = "none";
+                // displaynamma();
+            } else {
+                document.getElementById('errorlink').style.display = "";
+                d2 = '';
+                document.getElementById('displayfour').value = d2;
+                document.getElementById('displayfour1').value = d2;
+                document.getElementById('displayfour').className = "invalidinputtBN regNrmS5BN lower";
+                document.getElementById('displayfour1').className = "invalidinputtBN regNrmS5BN lower";
+                document.getElementById('avail').style.display = "none";
+                document.getElementById('unavail').style.display = "none";
+                document.getElementById('avail1').style.display = "none";
+                document.getElementById('unavail1').style.display = "none";
+                document.getElementById('goLiveBtn').disabled = true;
+                valid = false;
+            }
+
+            return valid;
+        }
+        function displaynamma() {
+            var d2 = document.getElementById('displayfour');
+            d2 = d2.value.toLowerCase();
+            d2 = d2.trim();
+            d2 = d2.replace(/\s/g, '');
+
+            document.getElementById('displayfour').value = d2;
+            document.getElementById('displayfour1').value = d2;
+            document.getElementById('loader').style.display = "";
+            document.getElementById('avail').style.display = "none";
+            document.getElementById('unavail').style.display = "none";
+            document.getElementById('avail1').style.display = "none";
+            document.getElementById('unavail1').style.display = "none";
+            document.getElementById('displayfour').className = "invalidinputtBN regNrmS5BN lower";
+            document.getElementById('displayfour1').className = "invalidinputtBN regNrmS5BN lower";
+            document.getElementById('goLiveBtn').disabled = true;
+            var vald = false;
+
+            var http7 = new XMLHttpRequest();
+            var url7 = "https://merchant.benow.in/user/displayupdate";
+            var obj7 = { storeUrl: d2 }
+            var params7 = JSON.stringify(obj7);
+            http7.open("POST", url7, true);
+            http7.setRequestHeader("Content-type", "application/json");
+            http7.onreadystatechange = function () {
+                if (http7.readyState == 4 && http7.status == 200) {
+                    var resp7 = JSON.parse(http7.responseText);
+                    if (resp7.data.responseFromAPI == false) {
+                        document.getElementById('errorlink').style.display = "none";
+                        document.getElementById('avail').style.display = "";
+                        document.getElementById('avail').innerHTML = "Available";
+                        document.getElementById('unavail').innerHTML = "";
+                        document.getElementById('unavail').style.display = "none";
+                        document.getElementById('avail1').style.display = "";
+                        document.getElementById('unavail1').style.display = "none";
+                        document.getElementById('avail1').innerHTML = "Available";
+                        document.getElementById('unavail1').innerHTML = "";
+                        document.getElementById('displayfour').className = "validinputtBN regNrmS5BN lower";
+                        document.getElementById('loader').style.display = "none";
+                        document.getElementById('goLiveBtn').disabled = false;
+                        document.getElementById('displayfour1').className = "validinputtBN regNrmS5BN lower";
+                        return 'true';
+
+                    } else {
+                        document.getElementById('errorlink').style.display = "none";
+                        document.getElementById('avail').style.display = "none";
+
+                        document.getElementById('unavail').style.display = "";
+                        document.getElementById('unavail').innerHTML = "Unavailable";
+                        document.getElementById('avail').innerHTML = "";
+                        document.getElementById('avail1').style.display = "none";
+                        document.getElementById('unavail1').style.display = "";
+                        document.getElementById('unavail1').innerHTML = "Unavailable";
+                        document.getElementById('avail1').innerHTML = "";
+                        document.getElementById('loader').style.display = "none";
+                        document.getElementById('displayfour').className = "invalidinputtBN regNrmS5BN lower";
+                        document.getElementById('displayfour1').className = "invalidinputtBN regNrmS5BN lower";
+                        document.getElementById('goLiveBtn').disabled = false;
+                        return 'false';
+                    }
+
+
+                }
+
+            }
+            http7.send(params7);
+
+        }
+    </script>
+    <script>
+        window['GoogleAnalyticsObject'] = 'ga';
+        window['ga'] = window['ga'] || function () {
+            (window['ga'].q = window['ga'].q || []).push(arguments)
+        };
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109225206-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments) };
+        gtag('js', new Date());
+        gtag('config', 'UA-109225206-1');
+    </script>
+</body>
+
+</html>
